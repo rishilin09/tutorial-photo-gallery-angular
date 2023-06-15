@@ -1,17 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <p>Calendar: Add Events</p>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="ion-padding">
+    <ion-calendar [(ngModel)]="date"
+      (change)="onChange($event)"
+      [type]="type"
+      [format]="'YYYY-MM-DD'">
+    </ion-calendar>
+    <input type="text" #text placeholder="Enter your Task">
+    <div class="btn" (click)="setTodo(text.value)">Add Todo</div>
+    <div class="todos">
+      <div class="title" *ngIf="list.length === 0">
+        No items added to list!
+      </div>
+      <div class="item" *ngFor="let item of list">
+        <div class="sub">
+          {{item.date}}
+        </div>
+        <div class="text">
+          {{item.text}}
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

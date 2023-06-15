@@ -6,7 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  
+  date: string;
+  type: string;
+  selectedDate: string;
+  list: {text: string, date: string}[] = [];
+  constructor() { }
 
-  constructor() {}
+
+  onChange(event: any) {
+    this.selectedDate = event._d.getDate();
+    console.log(event._d.getDate());
+  }
+
+
+  setTodo(text: string){
+    this.list.push({text: text, date: this.selectedDate});
+  }
+
 
 }

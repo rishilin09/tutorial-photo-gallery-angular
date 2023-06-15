@@ -1,3 +1,74 @@
-ion-content ion-toolbar {
-  --background: translucent;
+ion-content {
+  --background: #f7f7f7;
+}
+
+ion-title {
+  color: #333333;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #333333;
+  font-size: 3em;
+}
+
+ion-calendar {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  margin: 1rem;
+  border: none;
+  background-color: #009688;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input {
+  margin: 1rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #009688;
+  color: #333333;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 2px solid #009688;
+  font-size: 1.5rem;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #009688;
+}
+
+.sub {
+  margin-right: 1rem;
+  color: green;
+}
+
+.text {
+  flex-grow: 1;
+  color: #333333;
+}
+
+.title {
+  text-align: center;
+  margin: 1rem 0;
+  color: #666666;
 }
